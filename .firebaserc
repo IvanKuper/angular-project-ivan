@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-project-ivan": {
+      "hosting": {
+        "angular-project-ivan": [
+          "angular-project-ivan"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-project-ivan"
+  }
+}

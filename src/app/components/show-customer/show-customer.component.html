@@ -1,0 +1,53 @@
+<div class="d-block bg-dark text-white p-5 align-items-center">
+  <div class="search-hero">
+    <input
+      class="form-control"
+      type="text"
+      name="search"
+      [(ngModel)]="searchText"
+      autocomplete="off"
+      placeholder="&#61442; search customer name, email or phone..."
+    />
+  </div>
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">View</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers | filter: searchText; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ customer.firstName }}</td>
+        <td>{{ customer.lastName }}</td>
+        <td>{{ customer.phone }}</td>
+        <td>{{ customer.email }}</td>
+        <td>
+          <i
+            class="fa-solid fa-eye text-primary"
+            (click)="viewCustomer(customer)"
+          ></i>
+        </td>
+        <td>
+          <i
+            class="fa-solid fa-pen-to-square text-success"
+            (click)="updateCustomer(customer)"
+          ></i>
+        </td>
+        <td>
+          <i
+            class="fa-solid fa-trash text-danger"
+            (click)="deleteCustomer(customer)"
+          ></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,61 @@
+<div class="bg-dark text-white p-5">
+  <h4>Edit customer</h4>
+  <form #customerForm="ngForm" (ngSubmit)="updateCustomer()">
+    <div class="form-group">
+      <label for="firstName">First Name: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        [(ngModel)]="customer.firstName"
+        #name="ngModel"
+        name="firstName"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        [(ngModel)]="customer.lastName"
+        #author="ngModel"
+        required
+        name="lastName"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone: </label>
+      <input
+        name="phone"
+        id="phone"
+        [(ngModel)]="customer.phone"
+        class="form-control"
+        #phone
+        required
+        name="phone"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        [(ngModel)]="customer.email"
+        #email="ngModel"
+        required
+        name="email"
+      />
+    </div>
+    <button
+      class="btn btn-success mt-3 w-100"
+      type="submit"
+      [disabled]="customerForm.invalid"
+    >
+      Submit
+    </button>
+  </form>
+</div>

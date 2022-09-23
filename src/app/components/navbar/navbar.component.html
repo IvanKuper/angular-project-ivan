@@ -1,0 +1,17 @@
+<div class="bg-dark text-white p-5">
+  <div class="container text-center">
+    <h1>
+      CRM
+      <img
+        style="width: 50px"
+        src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Variable_Solution.png"
+        alt=""
+        routerLink="/home"
+      />
+    </h1>
+  </div>
+  <ng-container *ngIf="checkLogin()">
+    <div>Welcome back, {{ getUsername() }}</div>
+    <button class="btn btn-primary p-1 m-2" (click)="logout()">Logout</button>
+  </ng-container>
+</div>

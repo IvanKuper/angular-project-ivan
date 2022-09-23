@@ -1,0 +1,65 @@
+<div class="row-col-12 d-block">
+  <div class="d-flex flex-column p-3 text-white bg-dark">
+    <a
+      href="/"
+      class="d-flex align-items-center text-white text-decoration-none"
+    >
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+      <span class="fs-4">Sidebar</span>
+    </a>
+    <hr />
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a
+          routerLink="/home"
+          [class]="
+            activeBtn === 'home' ? 'nav-link active' : 'nav-link text-white'
+          "
+          aria-current="page"
+        >
+          <svg class="bi me-2" width="16" height="16"></svg>
+          Customers
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/contacts"
+          [class]="
+            activeBtn === 'contacts' ? 'nav-link active' : 'nav-link text-white'
+          "
+        >
+          <svg class="bi me-2" width="16" height="16">
+            <use xlink:href="#speedometer2"></use>
+          </svg>
+          Contacts
+        </a>
+      </li>
+      <li>
+        <a
+          [class]="
+            activeBtn === 'orders' ? 'nav-link active' : 'nav-link text-white'
+          "
+        >
+          <svg class="bi me-2" width="16" height="16">
+            <!-- <use xlink:href="#table"></use> -->
+          </svg>
+          Orders
+        </a>
+      </li>
+      <li>
+        <a
+          [class]="
+            activeBtn === 'products' ? 'nav-link active' : 'nav-link text-white'
+          "
+        >
+          <svg class="bi me-2" width="16" height="16">
+            <!-- <use xlink:href="#grid"></use> -->
+          </svg>
+          Products
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
